@@ -14,7 +14,7 @@ def generate_summaries_cnndm(args):
     min_length = 55
     count = 1
     bsz = 8
-    with open(args.src_dir) as source, open(args.tgt_dir, 'w') as fout:
+    with open(args.src_dir, encoding="utf-8") as source, open(args.tgt_dir, 'w', encoding="utf-8") as fout:
         sline = source.readline().strip().lower()
         slines = [sline]
         for sline in source:
